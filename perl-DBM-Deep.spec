@@ -5,7 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBM
 %define	pnam	Deep
-Summary:	DBM::Deep - A pure perl multi-level hash/array DBM
+Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
+Summary(pl):	DBM::Deep - czysto perlowy modu³ DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
 Version:	0.94
 Release:	1
@@ -20,13 +21,23 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A unique flat-file database module, written in pure perl. True
+A unique flat-file database module, written in pure Perl. True
 multi-level hash/array support (unlike MLDBM, which is faked), hybrid
 OO/tie() interface, cross-platform FTPable files, and quite fast.
 Can handle millions of keys and unlimited hash levels without
-significant slow-down. Written from the ground-up in pure perl --
+significant slow-down. Written from the ground-up in pure Perl -
 this is NOT a wrapper around a C-based DBM. Out-of-the-box
 compatibility with Unix, Mac OS X and Windows.
+
+%description -l pl
+Jest to unikalny modu³ bazy danych na p³askim pliku, napisany w
+czystym Perlu. Ma prawdziw± obs³ugê wielopoziomowych haszy/tablic (w
+przeciwieñstwie do MLDBM, który jest oszukany), hybrydowy interfejs
+obiektowy/tie(), wieloplatformowe pliki po FTP i jest do¶æ szybki.
+Mo¿e obs³u¿yæ miliony kluczy i nieograniczon± liczbê poziomów tablic
+asocjacyjnych bez znacznego spowolnienia. Napisany jest od pocz±tku w
+czystym Perlu - NIE jest to wrapper na modu³ DBM napisany w C. Jest
+kompatybilny z uniksami, Mac OS X oraz Windows.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
