@@ -37,7 +37,7 @@ obiektowy/tie(), wieloplatformowe pliki po FTP i jest do¶æ szybki.
 Mo¿e obs³u¿yæ miliony kluczy i nieograniczon± liczbê poziomów tablic
 asocjacyjnych bez znacznego spowolnienia. Napisany jest od pocz±tku w
 czystym Perlu - NIE jest to wrapper na modu³ DBM napisany w C. Jest
-kompatybilny z uniksami, Mac OS X oraz Windows.
+kompatybilny z Uniksami, Mac OS X oraz Windows.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
