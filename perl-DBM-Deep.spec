@@ -6,7 +6,7 @@
 %define		pdir	DBM
 %define		pnam	Deep
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
-Summary(pl):	DBM::Deep - czysto perlowy modu³ DBM dla wielopoziomowych haszy/tablic
+Summary(pl.UTF-8):   DBM::Deep - czysto perlowy moduÅ‚ DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
 Version:	0.94
 Release:	1
@@ -29,14 +29,14 @@ significant slow-down. Written from the ground-up in pure Perl -
 this is NOT a wrapper around a C-based DBM. Out-of-the-box
 compatibility with Unix, Mac OS X and Windows.
 
-%description -l pl
-Jest to unikalny modu³ bazy danych na p³askim pliku, napisany w
-czystym Perlu. Ma prawdziw± obs³ugê wielopoziomowych haszy/tablic (w
-przeciwieñstwie do MLDBM, który jest oszukany), hybrydowy interfejs
-obiektowy/tie(), wieloplatformowe pliki po FTP i jest do¶æ szybki.
-Mo¿e obs³u¿yæ miliony kluczy i nieograniczon± liczbê poziomów tablic
-asocjacyjnych bez znacznego spowolnienia. Napisany jest od pocz±tku w
-czystym Perlu - NIE jest to wrapper na modu³ DBM napisany w C. Jest
+%description -l pl.UTF-8
+Jest to unikalny moduÅ‚ bazy danych na pÅ‚askim pliku, napisany w
+czystym Perlu. Ma prawdziwÄ… obsÅ‚ugÄ™ wielopoziomowych haszy/tablic (w
+przeciwieÅ„stwie do MLDBM, ktÃ³ry jest oszukany), hybrydowy interfejs
+obiektowy/tie(), wieloplatformowe pliki po FTP i jest doÅ›Ä‡ szybki.
+MoÅ¼e obsÅ‚uÅ¼yÄ‡ miliony kluczy i nieograniczonÄ… liczbÄ™ poziomÃ³w tablic
+asocjacyjnych bez znacznego spowolnienia. Napisany jest od poczÄ…tku w
+czystym Perlu - NIE jest to wrapper na moduÅ‚ DBM napisany w C. Jest
 kompatybilny z Uniksami, Mac OS X oraz Windows.
 
 %prep
