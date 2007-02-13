@@ -6,7 +6,7 @@
 %define		pdir	DBM
 %define		pnam	Deep
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
-Summary(pl.UTF-8):   DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
+Summary(pl.UTF-8):	DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
 Version:	0.94
 Release:	1
