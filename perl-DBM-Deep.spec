@@ -8,13 +8,13 @@
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
 Summary(pl.UTF-8):	DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
-Version:	0.94
-Release:	2
+Version:	1.0014
+Release:	1
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	157130c0e4e25e2baaf2dd2adfde70fd
+# Source0-md5:	ceeb6dc09dc2e7b3beefdcc520a575a8
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -23,11 +23,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A unique flat-file database module, written in pure Perl. True
 multi-level hash/array support (unlike MLDBM, which is faked), hybrid
-OO/tie() interface, cross-platform FTPable files, and quite fast.
-Can handle millions of keys and unlimited hash levels without
-significant slow-down. Written from the ground-up in pure Perl -
-this is NOT a wrapper around a C-based DBM. Out-of-the-box
-compatibility with Unix, Mac OS X and Windows.
+OO/tie() interface, cross-platform FTPable files, and quite fast. Can
+handle millions of keys and unlimited hash levels without significant
+slow-down. Written from the ground-up in pure Perl - this is NOT a
+wrapper around a C-based DBM. Out-of-the-box compatibility with Unix,
+Mac OS X and Windows.
 
 %description -l pl.UTF-8
 Jest to unikalny moduł bazy danych na płaskim pliku, napisany w
@@ -64,4 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %dir %{perl_vendorlib}/DBM
 %{perl_vendorlib}/DBM/Deep.pm
+%{perl_vendorlib}/DBM/Deep/*.pm
 %{_mandir}/man3/*
