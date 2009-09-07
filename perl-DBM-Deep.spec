@@ -11,12 +11,18 @@ Name:		perl-DBM-Deep
 Version:	1.0014
 Release:	1
 # same as perl
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ceeb6dc09dc2e7b3beefdcc520a575a8
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-IO-stringy >= 0.01
+BuildRequires:	perl-Test-Deep >= 0.095
+BuildRequires:	perl-Test-Exception >= 0.21
+BuildRequires:	perl-Test-Warn >= 0.08
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,6 +50,7 @@ kompatybilny z Uniksami, Mac OS X oraz Windows.
 
 %build
 %{__perl} Makefile.PL \
+	destdir=$RPM_BUILD_ROOT \
 	INSTALLDIRS=vendor
 
 %{__make}
@@ -64,5 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %dir %{perl_vendorlib}/DBM
 %{perl_vendorlib}/DBM/Deep.pm
+%dir %{perl_vendorlib}/DBM/Deep
 %{perl_vendorlib}/DBM/Deep/*.pm
 %{_mandir}/man3/*
