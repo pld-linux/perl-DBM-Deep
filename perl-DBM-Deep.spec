@@ -8,13 +8,14 @@
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
 Summary(pl.UTF-8):	DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
-Version:	1.0014
-Release:	2
+Version:	2.0004
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ceeb6dc09dc2e7b3beefdcc520a575a8
+Source0:	http://www.cpan.org/modules/by-authors/id/S/SP/SPROUT/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	b329da1e68d203feed242b00ae3ebe7d
+URL:		http://search.cpan.org/dist/DBM-Deep/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -63,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/DBM/Deep.pod \
+	$RPM_BUILD_ROOT%{perl_vendorlib}/DBM/Deep/*.pod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -71,6 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %dir %{perl_vendorlib}/DBM
 %{perl_vendorlib}/DBM/Deep.pm
-%dir %{perl_vendorlib}/DBM/Deep
-%{perl_vendorlib}/DBM/Deep/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/DBM/Deep
+%{_mandir}/man3/DBM::Deep*.3pm*
