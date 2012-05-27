@@ -8,20 +8,26 @@
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
 Summary(pl.UTF-8):	DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
-Version:	2.0004
+Version:	2.0006
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/S/SP/SPROUT/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b329da1e68d203feed242b00ae3ebe7d
+# Source0-md5:	f0e009da2d5919031ce5b9c595e2c1e1
 URL:		http://search.cpan.org/dist/DBM-Deep/
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Digest-MD5 >= 1.00
+BuildRequires:	perl-File-Temp >= 0.01
 BuildRequires:	perl-IO-stringy >= 0.01
+BuildRequires:	perl-Pod-Parser >= 1.3
+BuildRequires:	perl-Scalar-List-Utils >= 1.14
+BuildRequires:	perl-Test-Builder-Tester >= 0.13
 BuildRequires:	perl-Test-Deep >= 0.095
 BuildRequires:	perl-Test-Exception >= 0.21
+BuildRequires:	perl-Test-Simple >= 0.88
 BuildRequires:	perl-Test-Warn >= 0.08
 %endif
 BuildArch:	noarch
