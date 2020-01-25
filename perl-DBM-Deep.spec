@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	DBM
 %define		pnam	Deep
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
