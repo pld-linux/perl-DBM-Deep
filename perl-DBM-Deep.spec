@@ -1,21 +1,20 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 
 %define		pdir	DBM
 %define		pnam	Deep
 Summary:	DBM::Deep - A pure Perl multi-level hash/array DBM
 Summary(pl.UTF-8):	DBM::Deep - czysto perlowy moduł DBM dla wielopoziomowych haszy/tablic
 Name:		perl-DBM-Deep
-Version:	2.0016
-Release:	2
+Version:	2.0017
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DBM/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cb8817ddd1fecc81ae2d47f812fd1f0e
-Patch0:		perl5.38.patch
-URL:		https://metacpan.org/release/DBM-Deep
+Source0:	https://www.cpan.org/modules/by-module/DBM/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	92e950e8b99ee0c0d9a7fdefb36dc7d1
+URL:		https://metacpan.org/dist/DBM-Deep
 BuildRequires:	perl-Module-Build >= 0.28
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -55,7 +54,6 @@ kompatybilny z Uniksami, Mac OS X oraz Windows.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
